@@ -1,0 +1,17 @@
+What is an Orphan and a Zombie process ?
+
+Orphan Process:
+A process which is currently running and  whose parent has finished running or has been terminated either by finishing its execution or has been terminated or has crashed.
+Thus a process without a parent process is called an Orphan process.
+
+Zombie Process:
+A process which has completed its execution but still has an entry in the process table is called as a Zombie process.
+A zombie process is created when the parent process never calls the wait() in order to read the child's exit status. 
+In that case the process is still in the memory and is called as a Zombie process. 
+The parent calls the wait() in order to read the exit status of the child after which the process is removed from the memory.
+
+***************************************************************************
+
+What are the changes that occur when the child process calls the exec system call to execute a new program?
+
+The exec call replaces the current process completely with a new program. Loads the program into the current process space i.e. loads the text and data sengment of the previous process withthe text and data segment of the current process. 
